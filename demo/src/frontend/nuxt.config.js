@@ -1,5 +1,6 @@
 module.exports = {
-  modules: ["@nuxtjs/axios", "@nuxtjs/proxy"],
+  modules: ["@nuxtjs/axios", "@nuxtjs/proxy", "@nuxt/postcss8"],
+  css: ["@/assets/css/main.css"],
   axios: { proxy: true },
   proxy: {
     "/api": { target: "http://localhost:8080/", changeOrgin: true },
@@ -21,9 +22,12 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    /*
-     ** Run ESLint on save
-     */
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
