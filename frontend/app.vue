@@ -1,15 +1,35 @@
 <template>
-  <div>
-    <header class="w-screen h-24 border-b-2 flex items-center">
+  <div class="root">
+    <nav class="w-screen h-20 border-b-2 flex items-center">
       <Icon name="uil:github" class="flex items-center ml-5" />
       <div class="tab flex-auto flex justify-end">
         <a href="" v-for="(tab, i) in tabs" :key="i">{{ tab }}</a>
       </div>
-    </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+    </nav>
+    <main>
+      <div class="box flex flex-col w-100">
+        <div class="subscribe">모두를 위한 동아리 동아리 관리 플랫폼</div>
+        <hr class="line" style="border: 1px white solid; width: 180px" />
+        <div class="small-box flex justify-around items-center w-full h-full">
+          <div class="card">진호가 만들었어요</div>
+          <div class="card">재헌이가 만들었어요</div>
+          <div class="card">상헌이가 만들었어요</div>
+          <div class="card">재흠이가 만들었어요</div>
+        </div>
+      </div>
+    </main>
   </div>
+  <!-- <footer>
+    <div class="logo"></div>
+    <div class="footer-box">
+      <div class="copyright">
+        <p class="addr">서울특별시 성동구 왕십리로 222 경제금융관 506호</p>
+        <p class="tel">02.2220.1807</p>
+        <p class="copy">COPYRIGHT ⓒ 2023 ZINOZZING. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+    <div class="site"></div>
+  </footer> -->
 </template>
 <script>
 export default {
@@ -28,6 +48,12 @@ export default {
 };
 </script>
 <style>
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 500vh;
+}
+
 .tab {
   padding: 15px;
   border-radius: 5px;
@@ -36,4 +62,51 @@ export default {
   padding: 10px;
   text-decoration: none;
 }
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.box {
+  width: 100%;
+  height: 75vh;
+  color: white;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+.subscribe {
+  padding: 80px 0 0 5%;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.line {
+  margin-left: 5%;
+}
+
+.card {
+  font-size: 25px;
+}
+/* 
+footer {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+  background-color: #2c2d30;
+  font-size: small;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.footer-box {
+  display: flex;
+  text-align: center;
+} */
 </style>
