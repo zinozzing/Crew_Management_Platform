@@ -7,7 +7,7 @@
       </div>
     </nav>
     <main>
-      <div class="box flex flex-col w-100">
+      <div class="box-1 flex flex-col w-full">
         <div class="subscribe">모두를 위한 동아리 동아리 관리 플랫폼</div>
         <hr class="line" style="border: 1px white solid; width: 180px" />
         <div class="small-box flex justify-around items-center w-full h-full">
@@ -17,9 +17,11 @@
           <div class="card">재흠이가 만들었어요</div>
         </div>
       </div>
+      <div class="box-2 flex flex-col w-full"></div>
+      <div class="box-3 flex flex-col w-full"></div>
     </main>
   </div>
-  <!-- <footer>
+  <footer>
     <div class="logo"></div>
     <div class="footer-box">
       <div class="copyright">
@@ -29,7 +31,7 @@
       </div>
     </div>
     <div class="site"></div>
-  </footer> -->
+  </footer>
 </template>
 <script>
 export default {
@@ -51,7 +53,7 @@ export default {
 .root {
   display: flex;
   flex-direction: column;
-  min-height: 500vh;
+  min-height: 350vh;
 }
 
 .tab {
@@ -69,12 +71,25 @@ nav {
   background-color: white;
 }
 
-.box {
-  width: 100%;
+.box-1 {
   height: 75vh;
   color: white;
   background-color: #8bc6ec;
   background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+.box-2 {
+  height: 75vh;
+}
+
+.box-3 {
+  height: 75vh;
+  background-color: black;
+}
+
+.box-4 {
+  height: 75vh;
+  background-color: white;
 }
 
 .subscribe {
@@ -90,7 +105,7 @@ nav {
 .card {
   font-size: 25px;
 }
-/* 
+
 footer {
   width: 100%;
   height: 15vh;
@@ -102,11 +117,10 @@ footer {
   background-color: #2c2d30;
   font-size: small;
   position: relative;
-  transform: translateY(-100%);
 }
 
 .footer-box {
   display: flex;
   text-align: center;
-} */
+}
 </style>

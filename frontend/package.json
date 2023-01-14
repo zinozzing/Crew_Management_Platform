@@ -8,8 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.2.0",
-    "nuxt": "3.0.0",
+    "@nuxtjs/tailwindcss": "^6.1.3",
+    "nuxt": "3.0.0-rc.13",
     "nuxt-icon": "^0.2.0"
+  },
+  "dependencies": {
+    "@nuxtjs/proxy": "^2.1.0",
+    "axios": "^1.2.2"
   }
 }
